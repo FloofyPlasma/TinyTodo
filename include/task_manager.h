@@ -4,14 +4,16 @@
 #ifndef TASK_MANAGER_H
 #define TASK_MANAGER_H
 
+#define MAX_INPUT_LENGTH 256
+
 typedef struct {
-  int id;
-  char description[256];
+  int ID;
+  char Description[256];
 } Task;
 
 typedef struct {
-  Task tasks[100];
-  int count;
+  Task Tasks[100];
+  int Count;
 } TaskList;
 
 void addTask(TaskList *TaskList, const char *TaskDescription);
